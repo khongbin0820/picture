@@ -29,7 +29,7 @@ mod_choose = int(input("請輸入照片之處理方式，數字1為分類模糊�
 #value_int = int(input("請輸入分辨照片是否為模糊脂數值，建議值為450:____"))
 print("讀取模式")
 
-if mod_choose==2:
+if mod_choose==1:
     for f in fileList:
         filename = (f.split('\\'))[-1]  # 取得檔案名稱
         imag = cv.imread(f)  # 依序讀圖
@@ -54,7 +54,7 @@ if mod_choose==2:
         print('Canny : ' + str(value)) #顯示值
         print('Laplacian : ' + str(imageVar))  # 顯示值
     ####
-if mod_choose==1:
+if mod_choose==2:
     for f in fileList:
         filename = (f.split('\\'))[-1]  # 取得檔案名稱
         imag = cv.imread(f)  # 依序讀圖
